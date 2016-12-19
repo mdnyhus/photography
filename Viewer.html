@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html>
+	
+	<head>
+		<title>Pictures</title>
+
+		<meta charset="utf-8" />
+		<link id="favicon" rel="shortcut icon" href="favicon.ico">
+		<link rel="stylesheet" media="all" href="pictures.css" />
+		<link href="https://fonts.googleapis.com/css?family=Catamaran" rel="stylesheet">
+		<script type="text/javascript" src="./Pictures/picturesJSON.js"></script>
+		<script type="text/javascript" src="menu.js"></script>
+		<script type="text/javascript" src="pictures.js"></script>
+	</head>
+
+	<body>
+	<div id="returnContainer">
+		<a id="returnLink" href="MatthewNyhusPhotography.html">
+			<div id="returnButton" class="returnButton">
+				<span id="returnButtonSpan" class="buttonSpan">
+					<img id="returnButtonImg" src="pictures/misc/return.png">
+				</span>
+			</div>
+		</a>
+	</div>
+	
+	<div id="sliderContainer" onclick="slideClick()">
+		<div id="sliderWrapper">
+			<div id="leftButton" class="sliderButton">
+				<span id="leftButtonSpan" class="buttonSpan">Process</span>
+			</div>
+			<div id="rightButton" class="sliderButton">
+				<span id="rightButtonSpan" class="buttonSpan">Reveal</span>
+			</div>
+			<div id="cover"></div>
+		</div>
+	</div>
+	
+	<div id="revealSliderContainer" onclick="revealSlideClick()">
+		<div id="revealSliderWrapper">
+			<div id="revealLeftButton" class="sliderButton">
+				<span id="revealLeftButtonSpan" class="buttonSpan revealImgSpan">
+					<img id="colResizeImg" class="resizeImg" src="pictures/misc/colResizeWhite.jpg">
+				</span>
+			</div>
+			<div id="revealRightButton" class="sliderButton">
+				<span id="revealRightButtonSpan" class="buttonSpan revealImgSpan">
+					<img id="rowResizeImg" class="resizeImg" src="pictures/misc/rowResizeWhite.jpg">
+				</span>
+			</div>
+			<div id="revealCover"></div>
+		</div>
+	</div>
+	
+	<div id="title">
+		<span id="titleSpan"></span>
+	</div>		
+	
+  <div id="superContainer">
+		<div id="fadeCover"></div>
+		
+		<div id="imgSuperContainer">
+			<div id="movingImgWrapper"></div>
+		</div>
+  
+		<div id="textSuperContainer">
+			<div id="description">
+				<span id="descriptionSpan"></span>
+			</div>
+			<div id="slides1" class="slidesContainer">
+				<div id="upArrowContainer1" class="upArrowContainer arrow" onclick="upArrowClicked()">
+					<img id="upArrowImg1" src="pictures/misc/leftArrow.jpg">
+				</div>
+				<div id="slideNames1" class="slideNames">
+					<div id="movingSlidesWrapper1" class="movingSlidesWrapper"></div>
+				</div>
+				<div id="downArrowContainer1" class="downArrowContainer arrow" onclick="downArrowClicked()">
+					<img id="downArrowImg1" src="pictures/misc/rightArrow.jpg">
+				</div>
+				
+				<div id="gradientCoverLeft" class="gradientCover" onclick="upArrowClicked()"></div>
+				<div id="gradientCoverRight" class="gradientCover" onclick="downArrowClicked()"></div>
+			</div>			
+		</div>
+		
+		<div id="revealContainer">
+			<div id="tightImgContainer">
+				<div id="originalImgCover" class="imgCover">
+					<img id="originalImg" class="revealImg">
+				</div>
+				<div id="finalImgCover" class="imgCover">
+					<img id="finalImg" class="revealImg">
+				</div>
+				<div id="imageSlider">
+					<input id="imageSliderRange" type="range" min="0" max="100" step="1" value="50" oninput="updateSlider(this.value)"/>
+				</div>
+			</div>
+		</div>
+	
+	</div>
+	
+	</body>
+  
+</html>

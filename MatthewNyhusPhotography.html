@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+	
+	<head>
+		<title>Matthew Nyhus Photography</title>
+
+		<meta charset="utf-8" />
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="stylesheet" media="all" href="pictures.css" />
+		<link href="https://fonts.googleapis.com/css?family=Catamaran" rel="stylesheet">
+		<script type="text/javascript" src="./Pictures/picturesJSON.js"></script>
+		<script type="text/javascript" src="menu.js"></script>
+	</head>
+
+	<body>	
+  <div id="title">
+		<span id="titleSpan">Matthew Nyhus Photography</span>
+	</div>
+	
+	<div id="infoButtonContainer" onclick="infoClick()">
+		<div id="infoButtonLink">
+			<div id="infoButton" class="infoButton">
+				<span id="infoButtonSpan" class="buttonSpan">
+					<img id="infoButtonImg" src="pictures/misc/info.png">
+				</span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="menuSuperContainer">
+		<div id="fadeCover"></div>
+		
+		<div id="menuSuperContainer">
+			
+		</div>	
+	</div>
+	
+	<div id="instagramContainer">
+		<a id="instagramWrapper" href="https://www.instagram.com/mdnyhus/">
+			<img id="instagramImg" src="pictures/misc/instagram.png">
+			<src id="instagramText">mdnyhus</src>
+		</a>
+	</div>
+	
+	<div id="infoContainer">
+		<div id="infoBackgroundCover" onclick="hideInfo()"></div>
+		<div id="infoTextContainer">
+			<div id="closeContainer" onclick="hideInfo()">
+				<img id="closeImg" src="pictures/misc/close.png">
+			</div>
+			<div id="infoText">
+				<p id="infoTitle">About</p>
+				<p class="infoBody">Welcome to my photography site!  The purpose of the site isn't primarily to showcase my pictures, but more to prototype a new style of photography websites that showcase not just the finished product, but also the work that went into editing the picture.  I assume that every picture I see online is edited, so instead of trying to hide the process, I thought it would be interesting to show that part off.</p>
+				<p class="infoBody">To start, simply select a picture you like.  Then, you can scroll through the different stages of the picture or, by selecting the toggle, see a before and after reveal by dragging on the picture.</p>				
+				<p id="endingLine" class="infoBody">Thanks for visiting!</p>
+			</div>
+		</div>
+	</div>
+	
+	
+	</body>
+  
+</html>

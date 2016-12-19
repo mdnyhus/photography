@@ -1,0 +1,538 @@
+html, body, div, img, a, p {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-family: 'Catamaran', sans-serif;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	font-size: 0px;
+	display: block;
+}
+
+/* Menu css */
+#infoButtonContainer {
+	width: 15vw;
+	height: 9vw;	
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+#infoButtonLink {
+	height: 100%;
+	width: 100%;
+}
+
+.infoButton {
+	width: 100%;
+	height: 100%;
+	line-height: 3vw;
+	float: left;
+	border: 0;
+	padding: 0;
+	text-align: center;
+}
+
+#infoButtonSpan {
+	height: 3vw;
+	width: 3vw;
+	margin-top: calc((9vw - 3vw)/2);
+	cursor: pointer;
+}
+
+#menuSuperContainer {	
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+}
+
+.menuImgContainer {
+	width: 33%;
+	float: left;
+	margin-bottom: 4vw;
+	overflow: hidden;
+	position: relative;
+}
+
+.menuLeftImg {
+	margin-right: 4%;
+	margin-left: 15%;
+}
+
+.foregroundImg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	visibility: hidden;
+}
+
+.fadeCoverBlack {
+	background-color: black;
+	opacity: 0.5;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	pointer-events: none;
+}
+
+.textCover {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 3;
+	pointer-events: none;
+	color: white;
+	text-align: center;
+	font-size: 2.5vw;
+	line-height: 2.5vw;
+	/* visibility: hidden; */
+}
+
+.textSpan {
+	display: inline-block;
+  margin-top: 50%;
+  transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+}
+
+#instagramContainer {
+	height: 3vw;
+	margin-bottom: 2vw;
+}
+
+#instagramWrapper {
+	text-decoration: none;
+	height: 100%;
+	color: blue;
+	font-size: 2vw;
+	text-align: center;
+}
+
+#instagramImg {
+	vertical-align: middle;
+}
+
+#instagramText {
+	display: inline-table;
+  transform: translateY(5%);
+}
+
+#infoContainer {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 5;
+	visibility: hidden;
+}
+
+#infoBackgroundCover {
+	background-color: black;
+	opacity: 0.5;
+	width: 100%;
+	height: 100%;
+}
+
+#infoTextContainer {
+	margin: 9vw 15%;
+	width: 70%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: white;
+}
+
+#closeContainer {
+	height: 1.5vw;
+	width: 1.5vw;
+	position: absolute;
+	top: 0.5vw;
+	right: 0.5vw;
+	opacity: 0.8;
+	cursor: pointer;
+}
+
+#closeImg {
+	height: 100%;
+	width: 100%;
+}
+
+#infoText {
+	margin: 2.5vw 4vw;
+	
+}
+
+#infoTitle {
+	font-size: 2vw;
+	text-align: center;
+	margin-bottom: 2vw;
+}
+
+.infoBody {
+	margin-bottom: 2vw;
+}
+
+#endingLine {
+	margin-bottom: 0;
+	text-align: center;
+}
+
+/* Viewer css */
+/* Should match the box in the top right */
+#returnContainer {
+	width: 15vw;
+	height: 9vw;	
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#returnLink {
+	height: 100%;
+	width: 100%;
+	cursor: default;
+}
+
+.returnButton {
+	width: 100%;
+	height: 100%;
+	line-height: 5vw;
+	float: left;
+	border: 0;
+	padding: 0;
+	text-align: center;
+}
+
+#returnButtonSpan {
+	height: 5vw;
+	width: 5vw;
+	margin-top: calc((9vw - 5vw)/2);
+	cursor: pointer;
+}
+
+#sliderContainer {
+	width: 15vw;
+	height: 9vw;	
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+#sliderWrapper {
+	width: 10vw;
+	height: 3vw;
+	margin: calc(3vw - 2*2px) calc(2.5vw - 2*2px);
+	border: 2px solid black;
+	border-radius: 2vw;
+	padding: 2px;	
+	cursor: pointer;
+}
+
+.sliderButton {
+	width: 5vw;
+	height: 3vw;
+	line-height: 3vw;
+	float: left;
+	border: 0;
+	padding: 0;
+	font-size: 1.15vw;
+	text-align: center;
+}
+
+.buttonSpan {
+	display: inline-block;
+  vertical-align: middle;
+	line-height: normal;
+}
+
+#cover {
+	width: 5vw;
+	height: 3vw;
+	background-color: black;
+	position: relative;
+	top: -3vw;
+	left: 5vw;
+	float: left;
+	border-radius: 2vw;
+}
+
+/* Should match the box in the top right */
+#revealSliderContainer {
+	width: 15vw;
+	height: 9vw;	
+	position: absolute;
+	top: 9vw;
+	right: 0;
+	visibility: hidden;
+}
+
+#revealSliderWrapper {
+	width: 10vw;
+	height: 3vw;
+	margin: calc(3vw - 2*2px) calc(2.5vw - 2*2px);
+	border: 2px solid black;
+	border-radius: 2vw;
+	padding: 2px;	
+	cursor: pointer;
+}
+
+.revealImgSpan {
+	height: 2.5vw;
+	width: 2.5vw;
+}
+
+.resizeImg {
+	height: 2.5vw;
+	width: 2.5vw;
+}
+
+#title {
+	width: 100%;
+	margin-bottom: 2vw;
+	margin-top: 2vw;
+	text-align: center;
+	font-size: 3vw;
+	min-height: 5vw;
+}
+
+#revealCover {
+	width: 5vw;
+	height: 3vw;
+	background-color: black;
+	position: relative;
+	top: -3vw;
+	left: 5vw;
+	float: left;
+	border-radius: 2vw;
+}
+
+#superContainer {	
+	width: calc(100% - 2*15vw);
+	height: 100%;
+	margin: 0 15vw;
+}
+
+#fadeCover {
+	position: absolute;
+	width: 100%;
+	top: 9vw;
+	left: 0;
+	height: calc(100% - 9vw);
+	background-color: white;
+	opacity: 0;
+	z-index: 2;
+	pointer-events:none;	
+	transition: opacity 500ms ease;
+}
+
+.fadeCoverWhite {
+	opacity: 1;
+	background-color: white;
+}
+
+
+#imgSuperContainer {
+	overflow: hidden;
+}
+
+#movingImgWrapper {
+	position: relative;
+}
+
+.imgContainer {
+	width: 33vw;
+	height: 33vw;
+	float: left;
+	margin-bottom: 1vw;
+	margin-right: 4vw;
+}
+
+#img1Container {
+	margin-right: 4vw;
+}
+
+#textSuperContainer {
+	position: relative;
+	height: calc(100vh - 2*5vw - 33vw - 4vw);
+}
+
+#description {
+	margin: 0 2vw;
+	margin-bottom: 1vw;
+	text-align: center;
+	height: 5vw;
+  font-size: 1.5vw;
+  overflow-y: auto;
+}
+
+.slidesContainer {
+	width: calc(2*5vw + 2*1vw + 4*(10vw + 4vw) - 4vw);
+	height: 5vw;
+	text-align:center;
+	margin: 0 auto;
+}
+
+.arrow {
+	height: 5vw;
+	width: 5vw;
+	margin: auto;
+	float: left;
+}
+
+.slideNames {
+	width: calc(4*(10vw + 4vw) - 4vw);
+	height: 5vw;
+	margin: 0 1vw;
+	float: left;
+	overflow: hidden;
+}
+
+.movingSlidesWrapper {
+	position: relative;
+	left: 14vw;
+}
+
+.slide {
+	float: left;
+	height: calc(5vw - 2*1px - 2*2px);
+	width: calc(10vw - 2*1px - 2*2px);
+	text-align: center;
+	line-height: 5vw;
+	border: 1px solid black;
+  padding: 2px;
+	margin-right: 4vw;
+	cursor: default;
+	font-size: 1.3vw;
+}
+
+.slideSpan {
+	display: inline-block;
+  vertical-align: middle;
+	line-height: normal;
+}
+
+.gradientCover {
+	height: 5vw;
+	width: calc(1vw + 10vw + 4vw);
+	background: white;
+	z-index: 1;
+	position: relative;
+	top: -5vw;
+	float: left;
+	cursor: pointer;
+}
+
+#gradientCoverLeft {
+	left: 5vw;
+	background: linear-gradient(to right, rgba(256, 256, 256, 1), rgba(256, 256, 256, 0))
+}
+
+#gradientCoverRight {
+	left: calc(4*(10vw + 4vw) - 5vw + 2*(1vw) - 2*(10vw + 4vw) + 4vw);
+	background: linear-gradient(to left, rgba(256, 256, 256, 1), rgba(256, 256, 256, 0))
+}
+
+#revealContainer {
+	position: absolute;
+	top: 9vw;
+	left: 15vw;
+	width: calc(100% - 2*15vw);
+	height: calc(100vh - 9vw - 9vw);	
+	z-index: 1;	
+	/* background-color: red; */
+	visibility: hidden;
+	line-height: calc(100vh - 9vw - 9vw);
+}
+
+#tightImgContainer {
+	height: 100%;
+}
+
+#originalImg {
+	position: relative;
+	top: 0;
+	left: 0;
+	vertical-align: middle;
+}
+
+#finalImg {
+	position: relative;
+	top: 0;
+	left: 0;
+	vertical-align: middle;
+}
+
+.imgCover {
+	overflow: hidden;
+	float: left;
+	height: 100%;
+	width: 100%;
+}
+
+/* Reveal should never be oversized, so I can use vw or vh */
+.revealImg {
+	max-width: calc(100vw - 2*15vw);
+	max-height: calc(100vh - 9vw - 9vw);
+}
+
+#revealContainerVert {
+	position: absolute;
+	top: 9vw;
+	left: 15vw;
+	width: calc(100vw - 2*15vw);
+	height: calc(100vh - 9vw - 9vw);	
+	z-index: 1;	
+	/* background-color: red; */
+	visibility: hidden;
+	line-height: calc(100vh - 9vw - 9vw);
+}
+
+#tightImgContainerVert {
+	height: 100%;
+}
+
+#originalImgVert {
+	position: relative;
+	top: 0;
+	left: 0;
+	vertical-align: middle;
+}
+
+#finalImgVert {
+	position: relative;
+	top: 0;
+	left: 0;
+	vertical-align: middle;
+}
+
+#imageSlider {
+	height: 100%;
+	width: 100%;
+	position: relative;
+}
+
+#imageSliderRange {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	cursor: col-resize;
+}
