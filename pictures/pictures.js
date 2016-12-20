@@ -25,6 +25,7 @@ var imgSuperContainer;
 var textSuperContainer;
 var revealContainer;
 var tightImgContainer;
+var dragging = false;
 var originalImg;
 var originalImgCover;
 var finalImg;
@@ -242,6 +243,52 @@ function initializeReveal() {
 	finalImg.src = getImgFromName(pictureJSON.stages[numImages - 1].name);
 	finalImgCover = document.getElementById("finalImgCover");
 	imageSliderRange = document.getElementById("imageSliderRange");
+	
+	tightImgContainer.addEventListener('mousedown', function (event) {
+      this.dragging = true;
+      // this.config.cursorOffsetX = event.offsetX;
+      // this.config.cursorOffsetY = event.offsetY;
+      this.moveSliderEv(event);
+			console.log("Start move");
+  }.bind(this));
+	tightImgContainer.addEventListener('mousemove', function (event) {
+		event.preventDefault();
+		if (this.dragging) {
+			// event.target.style.cursor = 'move'; 
+			this.moveSliderEv(event);
+			console.log("in move");
+		}
+	}.bind(this));
+	tightImgContainer.addEventListener('mouseup', function (event) {
+		this.dragging = false;
+		// event.target.style.cursor = 'pointer'; 
+		// this.reset();
+		console.log("finish move");
+	}.bind(this));
+}
+
+function moveSliderEv(ev) {
+	// console.log(ev);
+	// clientRect = ev.target.getBoundingClientRect();
+	// x = ev.x - clientRect.left;
+	// y = ev.y - clientRect.top;
+	// console.log(x);
+	// console.log(y);
+	// ev.dataTransfer.effectAllowed = "copyMove";
+	// tightImgContainer.style.cursor = "default";
+	if (horz) {
+		// console.log(ev.x);
+		// console.log(ev.target.getBoundingClientRect().left);
+		// console.log(ev.target.width);
+		
+		// foo = 100 * (ev.x - ev.target.getBoundingClientRect().left) / ev.target.width;
+		// console.log(foo)
+		updateSlider(100 * (ev.x - ev.target.getBoundingClientRect().left) / ev.target.width);
+		// tightImgContainer.style.cursor = "col-resize";
+	} else {
+		updateSlider(100 * (ev.y - ev.target.getBoundingClientRect().top) / ev.target.height);
+		// tightImgContainer.style.cursor = "row-resize";
+	}
 }
 
 function slideClick() {
@@ -341,16 +388,16 @@ function revealSlideClick() {
 
 function flipRevealSlider() {
 	if (horz) {
-		changeTransform(imageSliderRange, "rotate(0deg)");
-		imageSliderRange.style.cursor = "col-resize";
+		// changeTransform(imageSliderRange, "rotate(0deg)");
+		tightImgContainer.style.cursor = "col-resize";
 		originalImgCover.style.width = revealSliderValue + "%";
 		originalImgCover.style.height = "100%";
 		finalImgCover.style.width = (100 - revealSliderValue) + "%";
 		finalImgCover.style.height = "100%";		
 		changeTransform(finalImg, "translateX(-" + revealSliderValue + "%)");
 	} else {
-		changeTransform(imageSliderRange, "rotate(90deg)");
-		imageSliderRange.style.cursor = "row-resize";
+		// changeTransform(imageSliderRange, "rotate(90deg)");
+		tightImgContainer.style.cursor = "row-resize";
 		originalImgCover.style.width = "100%";
 		originalImgCover.style.height = revealSliderValue + "%";
 		finalImgCover.style.width = "100%";

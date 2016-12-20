@@ -460,7 +460,17 @@ a {
 
 #tightImgContainer {
 	height: 100%;
+	cursor: col-resize;
+	
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
 }
+
+/* #tightImgContainer:active, #tightImgContainer:focus { 
+    cursor: col-resize;
+} */
 
 #originalImg {
 	position: relative;
