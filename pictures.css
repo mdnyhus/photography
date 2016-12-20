@@ -529,36 +529,45 @@ a {
 	position: absolute;
 	top: 0;
 	left: 0;
-	/* opacity: 0; */
+	opacity: 0;
 	cursor: col-resize;
 }
 
 input[type=range]::-webkit-slider-runnable-track {
-	height: 100%;
+	/* height: 100%; */
 	/* cursor: pointer; */
+	background: black;
+	height: calc(100vh - 9vw - 9vw);
 }
 
 input[type=range]::-moz-range-track {
-	height: 100%;
+	/* height: 100%; */
 	/* cursor: pointer; */
 }
 
 input[type=range]::-ms-track {
-  height: 100%;
+  /* height: 100%; */
   /* cursor: pointer; */
 }
 
 input[type=range]::-webkit-slider-thumb {
-	height: 100%;
+	/* height: 100%; */
 	/* cursor: pointer; */
+	background: black;
+	height: calc(100vh - 9vw - 9vw);
 }
 
 input[type=range]::-moz-range-thumb {
-	height: 100%;
+	/* height: 100%; */
 	/* cursor: pointer; */
+	background: black;
+	height: calc(100vh - 9vw - 9vw);
+	/* width: 200px; */
 }
 
 input[type=range]::-ms-thumb {
-  height: 100%;
+  /* height: 100%; */
   /* cursor: pointer; */
+	background: black;
+	height: calc(100vh - 9vw - 9vw);
 }
