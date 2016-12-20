@@ -16,8 +16,6 @@ function loadMenu() {
 	menuSuperContainer = document.getElementById("menuSuperContainer");
 	infoContainer = document.getElementById("infoContainer");
 	mobile = mobileCheck();
-	// TODO: if correct, use this value
-	alert(mobile);
 	
 	loadImages();
 }
@@ -33,6 +31,11 @@ function loadImages() {
 			className += " menuLeftImg";
 		}
 		
+		oldMenuImgSrc = "";
+		if (!mobile) {
+			oldMenuImgSrc = getImgSrc(i, true);
+		}
+		
 		pictures.push(
 			"<div id=\"menuImg", iStr, "Container\" class=\"", className, "\" ",
 			"onmouseover=\"hoverOn(", i, ")\" ",
@@ -46,7 +49,7 @@ function loadImages() {
 			"</span>",
 			"</div>",
 			"<a href=\"pictures/viewer.html?", i, "\">",
-			"<img id=\"oldMenuImg", iStr, "\" src=\"", getImgSrc(i, true),	"\">",
+			"<img id=\"oldMenuImg", iStr, "\" src=\"", oldMenuImgSrc,	"\">",
 			"</a>",
 			"</div>",
 			
