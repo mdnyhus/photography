@@ -1,0 +1,33 @@
+SF MOMA edits
+1. Crop
+2. Tune Image
+	Brightness	-18
+	Contrast		+65
+	Ambiance		-74
+	Highlights	-23
+	Shadows			-66
+3. Details
+	Structure		+91
+	Sharpening	+54
+4. Tune Image
+	Brightness	-29
+	Contrast		+58
+	Saturation	+62
+	Ambiance		-35
+	Highlights	+56
+	Shadows			-50
+5. Tune Image (Just bars)
+	Brightness	-32
+	Contrast		-49
+	Ambiance		-54
+	Highlights	-49
+	Shadows			-53
+6. White Balance (All except escalator)
+	Temperature: 	-100
+	Tint: 				-100
+7. White Balance (Gradient)
+	Temperature: 	+37
+	Tint: 				-35
+8. Lens Blur (Line at top, omit escalator)
+	Blur Strength:	+11
+	Transition:			+100

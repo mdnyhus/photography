@@ -1,0 +1,30 @@
+SF MOMA edits
+1. Crop
+2. Healing (Remove lines)
+3. Details (Not Sky)
+	Structure		+85
+	Sharpening 	+47
+4. Tune Image (Not Sky)
+	Contrast		+60
+	Saturation	+75
+	Ambiance		-40
+	Highlights	+34
+	Shadows			-36
+5. Details (Sky)
+	Structure		-79
+6. Tune Image (Sky)
+	Brightness	+4
+	Contrast		-2
+	Saturation	+83
+	Ambiance		+59
+	Highlights	+45
+	Shadows			-35
+	Warmth	-1	
+7. Tune Image (Not Bridge)
+	Brightness	+7
+	Contrast		+23
+	Saturation	+26
+	Ambiance		+36
+	Highlights	+15
+	Shadows			-14
+	Temperature	+9

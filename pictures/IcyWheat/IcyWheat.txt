@@ -1,0 +1,26 @@
+SF MOMA edits
+1. Crop
+2. Details
+	Structure		+39
+	Sharpening	+30
+3. Tune Image (Colour)
+	Contrast		+43
+	Saturation	+75
+	Ambiance		+37
+4. Tune Image (Light)
+	Brightness	-13
+	Highlights	-6
+	Shadows 		-27
+5. Details (Just Wheat)
+	Structure		+87
+	Sharpening	+86
+5. Tune Image (Just Wheat)
+	Brightness	+47
+	Contrast		+22
+	Saturation	+47
+	Ambiance 		+15
+	Highlights	+26
+	Shadows			-29
+6. White Balance (Primarily Ground, little sky)
+	Temperature	+26
+	

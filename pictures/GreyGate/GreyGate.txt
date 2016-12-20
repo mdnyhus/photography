@@ -1,0 +1,29 @@
+SF MOMA edits
+1. Crop
+2. Details
+	Structure		+21
+	Sharpening	+19
+3. Tune Image (Colour)
+	Contrast		+40
+	Saturation	-34
+	Ambiance		-87
+4. Tune Image (Light)
+	Brightness	+20
+	Highlights	-26
+	Shadows			-85
+5. Selective (Bridge)
+	Front Support
+		Brightness	+24
+		Contrast		+38
+		Saturation	+92
+	Back Support
+		Brightness	-10
+		Contrast		+25
+		Saturation	+28
+6. Tune Image (Desaturate) Just water
+	Brightness	-11
+	Contrast		+10
+	Saturation	-77
+	Ambiance 		+14
+	Highlights	+13
+	Shadows			-24

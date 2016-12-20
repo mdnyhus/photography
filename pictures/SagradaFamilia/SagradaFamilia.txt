@@ -1,0 +1,23 @@
+SF MOMA edits
+1. Crop
+2. Details
+	Structure		+78
+	Sharpening	+78
+3. Tune Image (Colour)
+	Contrast		+25
+	Saturation	+69
+	Ambiance		-34
+4. Tune Image (Light)
+	Brightness	+27
+	Highlights	+12
+	Shadows 		-19
+5. Lens Blur (Oval on pillar)
+	Blur Strength	+14
+	Transition		+40
+6. Tune Image (Touch Up)
+	Brightness	+18
+	Saturation	+27
+	Ambiance 		+23
+	Highlights	+20
+	Shadows			-31
+	

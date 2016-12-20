@@ -1,0 +1,20 @@
+SF MOMA edits
+1. Crop
+2. Details
+	Structure		+64
+	Sharpening	+17
+3. Tune Image (Colour)
+	Contrast		+41
+	Saturation	+66
+	Ambiance		-1
+4. Tune Image (Light)
+	Brightness	-32
+	Highlights	+35
+	Shadows			-38
+5. Details (Ground)
+	Structure		+42
+	Sharpening	+24
+6. White Balance
+	Temperature	-6
+7. White Balance (Sky)
+	Temperature	+53
