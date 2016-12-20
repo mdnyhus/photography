@@ -258,6 +258,21 @@ function initializeReveal() {
 	tightImgContainer.addEventListener('mouseup', function (event) {
 		this.dragging = false;
 	}.bind(this));
+	
+	tightImgContainer.addEventListener('touchstart', function (event) {
+		event.preventDefault();
+		this.dragging = true;
+		this.moveSliderEv(event);
+  }.bind(this));
+	tightImgContainer.addEventListener('touchmove', function (event) {
+		event.preventDefault();
+		if (this.dragging) {
+			this.moveSliderEv(event);
+		}
+	}.bind(this));
+	tightImgContainer.addEventListener('touchend', function (event) {
+		this.dragging = false;
+	}.bind(this));
 }
 
 function moveSliderEv(ev) {
@@ -270,16 +285,30 @@ function moveSliderEv(ev) {
 	// ev.dataTransfer.effectAllowed = "copyMove";
 	// tightImgContainer.style.cursor = "default";
 	if (horz) {
-		console.log(ev.clientX);
+		point = 0;
+		if (ev.clientX) {
+			point = ev.clientX;
+		} else {
+			point = ev.touches[0].clientX;
+		}
+		
+		console.log(point);
 		console.log(ev.target.getBoundingClientRect().left);
 		console.log(ev.target.width);
 		
-		foo = 100 * (ev.clientX - ev.target.getBoundingClientRect().left) / ev.target.width;
+		foo = 100 * (point - ev.target.getBoundingClientRect().left) / ev.target.width;
 		console.log(foo)
-		updateSlider(100 * (ev.clientX - ev.target.getBoundingClientRect().left) / ev.target.width);
+		updateSlider(100 * (point - ev.target.getBoundingClientRect().left) / ev.target.width);
 		// tightImgContainer.style.cursor = "col-resize";
 	} else {
-		updateSlider(100 * (ev.clientY - ev.target.getBoundingClientRect().top) / ev.target.height);
+		point = 0;
+		if (ev.clientX) {
+			point = ev.clientY;
+		} else {
+			point = ev.touches[0].clientY;
+		}
+		
+		updateSlider(100 * (point - ev.target.getBoundingClientRect().top) / ev.target.height);
 		// tightImgContainer.style.cursor = "row-resize";
 	}
 }
