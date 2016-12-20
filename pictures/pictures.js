@@ -82,7 +82,7 @@ function initializeVariables() {
 }
 
 function getImgFromName(name) {
-	imgSrcPrefix = "./pictures/" + pictureJSON.folder + "/";
+	imgSrcPrefix = "./" + pictureJSON.folder + "/";
 	return imgSrcPrefix + name;
 }
 
