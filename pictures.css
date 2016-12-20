@@ -547,3 +547,18 @@ input[type=range]::-ms-track {
   height: 100%;
   /* cursor: pointer; */
 }
+
+input[type=range]::-webkit-slider-thumb {
+	height: 100%;
+	/* cursor: pointer; */
+}
+
+input[type=range]::-moz-range-thumb {
+	height: 100%;
+	/* cursor: pointer; */
+}
+
+input[type=range]::-ms-thumb {
+  height: 100%;
+  /* cursor: pointer; */
+}
