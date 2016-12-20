@@ -456,7 +456,6 @@ a {
 	z-index: 1;	
 	/* background-color: red; */
 	visibility: hidden;
-	line-height: calc(100vh - 9vw - 9vw);
 }
 
 #tightImgContainer {
@@ -467,14 +466,12 @@ a {
 	position: relative;
 	top: 0;
 	left: 0;
-	vertical-align: middle;
 }
 
 #finalImg {
 	position: relative;
 	top: 0;
 	left: 0;
-	vertical-align: middle;
 }
 
 .imgCover {
@@ -499,7 +496,6 @@ a {
 	z-index: 1;	
 	/* background-color: red; */
 	visibility: hidden;
-	line-height: calc(100vh - 9vw - 9vw);
 }
 
 #tightImgContainerVert {

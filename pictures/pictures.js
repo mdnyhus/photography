@@ -378,5 +378,8 @@ function dynamicSizing() {
 	width = Math.min(maxWidth, maxHeight);
 	
 	tightImgContainer.style.width = width + "px";
-	tightImgContainer.style.padding = "calc((100vh - 9vw - 9vw - " + width + "px)/2) calc((70vw - " + width + "px)/2)";
+	tightImgContainer.style.padding = "0 calc((70vw - " + width + "px)/2)";
+	tightImgContainer.style.paddingBottom = "calc((100vh - 9vw - 9vw - " + width + "px))";
+	tightImgContainer.style.width = width + "px";
+	tightImgContainer.style.height = width + "px";
 }
