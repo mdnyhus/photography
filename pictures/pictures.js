@@ -106,7 +106,7 @@ function initializeImgs() {
 	
 	movingImgWrapper = document.getElementById("movingImgWrapper");
 	movingImgWrapper.innerHTML = imgsDom.join("");
-	movingImgWrapper.style.width = "calc(" + numImages + "*(33vw + 4vw)";
+	movingImgWrapper.style.width = "calc(" + numImages + "*(33vw + 4vw))";
 	
 	for (i = 0; i < numImages; i++) {
 		iStr = i.toString();
