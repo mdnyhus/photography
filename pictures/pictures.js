@@ -9,6 +9,8 @@ var slideSpanVars = [];
 var movingSlidesWrapper;
 var upArrow;
 var downArrow;
+var gradientCoverLeft;
+var gradientCoverRight;
 var selectedSlide = 0;
 var offset;
 var setIntervalImgSlides = false;
@@ -138,6 +140,8 @@ function initializeSlides() {
 	
 	upArrow = document.getElementById("upArrowImg1");
 	downArrow = document.getElementById("downArrowImg1");
+	gradientCoverLeft = document.getElementById("gradientCoverLeft");
+	gradientCoverRight = document.getElementById("gradientCoverRight");
 }
 
 function updateSelectedSlide(selectedIndex) {
@@ -146,16 +150,20 @@ function updateSelectedSlide(selectedIndex) {
 	if (selectedIndex == 0) {
 		upArrow.style.opacity = 0.2;
 		upArrow.style.cursor = "auto";
+		gradientCoverLeft.style.cursor = "auto";
 	} else {
 		upArrow.style.opacity = 1;
 		upArrow.style.cursor = "pointer";
+		gradientCoverLeft.style.cursor = "pointer";
 	}
 	if (selectedIndex >= numImages - 2) {
 		downArrow.style.opacity = 0.2;
 		downArrow.style.cursor = "auto";
+		gradientCoverRight.style.cursor = "auto";
 	} else {
 		downArrow.style.opacity = 1;
 		downArrow.style.cursor = "pointer";
+		gradientCoverRight.style.cursor = "pointer";
 	}
 	
 	if (selectedSlide !== undefined) {
