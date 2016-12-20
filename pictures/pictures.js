@@ -1,4 +1,3 @@
-var vieweingImage = false;
 var pictureJSON;
 var numImages;
 var imgs = [];
@@ -46,7 +45,7 @@ window.onresize = function() {
 	dynamicSizing();
 }
 
-function loadImageViewer() {
+function loadImageViewer() {	
 	var selectedImg = 0;
 	var url = window.location.href;
 	var params = url.split('?');
@@ -244,6 +243,8 @@ function initializeReveal() {
 	finalImgCover = document.getElementById("finalImgCover");
 	imageSliderRange = document.getElementById("imageSliderRange");
 	
+	var bodyEl = document.getElementById("body");
+	
 	tightImgContainer.addEventListener('mousedown', function (event) {
 		event.preventDefault();
 		this.dragging = true;
@@ -255,7 +256,7 @@ function initializeReveal() {
 			this.moveSliderEv(event);
 		}
 	}.bind(this));
-	tightImgContainer.addEventListener('mouseup', function (event) {
+	bodyEl.addEventListener('mouseup', function (event) {
 		this.dragging = false;
 	}.bind(this));
 	
@@ -270,20 +271,12 @@ function initializeReveal() {
 			this.moveSliderEv(event);
 		}
 	}.bind(this));
-	tightImgContainer.addEventListener('touchend', function (event) {
+	bodyEl.addEventListener('touchend', function (event) {
 		this.dragging = false;
 	}.bind(this));
 }
 
 function moveSliderEv(ev) {
-	// console.log(ev);
-	// clientRect = ev.target.getBoundingClientRect();
-	// x = ev.x - clientRect.left;
-	// y = ev.y - clientRect.top;
-	// console.log(x);
-	// console.log(y);
-	// ev.dataTransfer.effectAllowed = "copyMove";
-	// tightImgContainer.style.cursor = "default";
 	if (horz) {
 		point = 0;
 		if (ev.clientX) {
@@ -292,14 +285,12 @@ function moveSliderEv(ev) {
 			point = ev.touches[0].clientX;
 		}
 		
-		console.log(point);
-		console.log(ev.target.getBoundingClientRect().left);
-		console.log(ev.target.width);
-		
-		foo = 100 * (point - ev.target.getBoundingClientRect().left) / ev.target.width;
-		console.log(foo)
-		updateSlider(100 * (point - ev.target.getBoundingClientRect().left) / ev.target.width);
-		// tightImgContainer.style.cursor = "col-resize";
+		offsetPercentage = 100 * (point - ev.target.getBoundingClientRect().left) / ev.target.width;
+		if (!(offsetPercentage === NaN || 0 >= offsetPercentage || offsetPercentage >= 100)) {
+			updateSlider(offsetPercentage);
+		}	else {
+			console.log("hello");
+		}	
 	} else {
 		point = 0;
 		if (ev.clientX) {
@@ -308,8 +299,10 @@ function moveSliderEv(ev) {
 			point = ev.touches[0].clientY;
 		}
 		
-		updateSlider(100 * (point - ev.target.getBoundingClientRect().top) / ev.target.height);
-		// tightImgContainer.style.cursor = "row-resize";
+		offsetPercentage = 100 * (point - ev.target.getBoundingClientRect().top) / ev.target.height;
+		if (!(offsetPercentage === NaN || 0 >= offsetPercentage || offsetPercentage >= 100)) {
+			updateSlider(offsetPercentage);
+		}
 	}
 }
 
