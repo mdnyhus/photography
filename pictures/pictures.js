@@ -245,25 +245,18 @@ function initializeReveal() {
 	imageSliderRange = document.getElementById("imageSliderRange");
 	
 	tightImgContainer.addEventListener('mousedown', function (event) {
-      this.dragging = true;
-      // this.config.cursorOffsetX = event.offsetX;
-      // this.config.cursorOffsetY = event.offsetY;
-      this.moveSliderEv(event);
-			console.log("Start move");
+		event.preventDefault();
+		this.dragging = true;
+		this.moveSliderEv(event);
   }.bind(this));
 	tightImgContainer.addEventListener('mousemove', function (event) {
 		event.preventDefault();
 		if (this.dragging) {
-			// event.target.style.cursor = 'move'; 
 			this.moveSliderEv(event);
-			console.log("in move");
 		}
 	}.bind(this));
 	tightImgContainer.addEventListener('mouseup', function (event) {
 		this.dragging = false;
-		// event.target.style.cursor = 'pointer'; 
-		// this.reset();
-		console.log("finish move");
 	}.bind(this));
 }
 
@@ -277,16 +270,16 @@ function moveSliderEv(ev) {
 	// ev.dataTransfer.effectAllowed = "copyMove";
 	// tightImgContainer.style.cursor = "default";
 	if (horz) {
-		// console.log(ev.x);
-		// console.log(ev.target.getBoundingClientRect().left);
-		// console.log(ev.target.width);
+		console.log(ev.clientX);
+		console.log(ev.target.getBoundingClientRect().left);
+		console.log(ev.target.width);
 		
-		// foo = 100 * (ev.x - ev.target.getBoundingClientRect().left) / ev.target.width;
-		// console.log(foo)
-		updateSlider(100 * (ev.x - ev.target.getBoundingClientRect().left) / ev.target.width);
+		foo = 100 * (ev.clientX - ev.target.getBoundingClientRect().left) / ev.target.width;
+		console.log(foo)
+		updateSlider(100 * (ev.clientX - ev.target.getBoundingClientRect().left) / ev.target.width);
 		// tightImgContainer.style.cursor = "col-resize";
 	} else {
-		updateSlider(100 * (ev.y - ev.target.getBoundingClientRect().top) / ev.target.height);
+		updateSlider(100 * (ev.clientY - ev.target.getBoundingClientRect().top) / ev.target.height);
 		// tightImgContainer.style.cursor = "row-resize";
 	}
 }
