@@ -277,33 +277,33 @@ function initializeReveal() {
 }
 
 function moveSliderEv(ev) {
+	offsetPercentage = 0;
 	if (horz) {
 		point = 0;
 		if (ev.clientX) {
 			point = ev.clientX;
 		} else {
 			point = ev.touches[0].clientX;
-		}
-		
+		}		
 		offsetPercentage = 100 * (point - ev.target.getBoundingClientRect().left) / ev.target.width;
-		if (!(offsetPercentage === NaN || 0 >= offsetPercentage || offsetPercentage >= 100)) {
-			updateSlider(offsetPercentage);
-		}	else {
-			console.log("hello");
-		}	
 	} else {
 		point = 0;
 		if (ev.clientX) {
 			point = ev.clientY;
 		} else {
 			point = ev.touches[0].clientY;
-		}
-		
+		}		
 		offsetPercentage = 100 * (point - ev.target.getBoundingClientRect().top) / ev.target.height;
-		if (!(offsetPercentage === NaN || 0 >= offsetPercentage || offsetPercentage >= 100)) {
-			updateSlider(offsetPercentage);
-		}
 	}
+	
+	if (offsetPercentage === NaN) {
+		return;
+	} else if (offsetPercentage <= 0) {
+		offsetPercentage = 0;
+	} else if (offsetPercentage >= 100) {
+		offsetPercentage = 100;
+	}
+	updateSlider(offsetPercentage);
 }
 
 function slideClick() {

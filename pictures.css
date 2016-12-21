@@ -187,9 +187,12 @@ a {
 	margin-bottom: 2vw;
 }
 
+.centerLine {
+	text-align: center;
+}
+
 #endingLine {
 	margin-bottom: 0;
-	text-align: center;
 }
 
 /* Viewer css */
